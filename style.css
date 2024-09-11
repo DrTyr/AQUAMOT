@@ -189,3 +189,10 @@ footer {
   margin: 0;
   font-size: 4rem; /* Taille de la police du titre */
 }
+
+hr.divider {
+  border: 0;
+  height: 2px;
+  background: #255189; /* Couleur de la barre */
+  margin: 5px 0; /* Espacement au-dessus et au-dessous */
+}
