@@ -18,13 +18,25 @@ header h1 {
   margin: 0; /* Éviter les marges par défaut du titre */
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+header .logo-link {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Classe pour organiser les boutons dans une grille */
+/* Menu hamburger */
+.menu-toggle {
+  display: none; /* Masquer par défaut */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Grille des boutons */
 .button-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour grands écrans */
@@ -33,7 +45,6 @@ header h1 {
   padding: 20px;
 }
 
-/* Styles spécifiques pour les boutons sur la page d'accueil */
 .button {
   display: inline-block;
   text-align: center;
@@ -79,7 +90,7 @@ header h1 {
 }
 
 .detail-image {
-  width: 300px; /* Ajustez la taille de l'image comme nécessaire */
+  width: 300px;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
@@ -90,38 +101,64 @@ header h1 {
 }
 
 .detail-text h2 {
-  font-size: 2rem; /* Taille du titre dans la section de détails */
+  font-size: 2rem;
   margin: 0 0 10px 0;
 }
 
 .detail-text p {
-  font-size: 1rem; /* Taille du texte dans la section de détails */
+  font-size: 1rem;
   line-height: 1.5;
 }
 
 /* Styles spécifiques pour les boutons sur la page de détails */
 .enfants .button {
-  margin: 10px; /* Réduire la marge pour les boutons sur la page enfants */
+  margin: 10px;
 }
 
 .enfants .button img {
-  width: 100px; /* Réduire la taille des images sur la page enfants */
+  width: 100px;
   height: 100px;
 }
 
 .enfants .button span {
-  font-size: 1rem; /* Réduire la taille du texte sur la page enfants */
+  font-size: 1rem;
 }
 
 /* Styles pour le lien du titre dans l'en-tête */
 .logo-link {
-  text-decoration: none; /* Supprimer le soulignement du lien */
-  color: inherit; /* Hériter la couleur du texte du h1 */
+  text-decoration: none;
+  color: inherit;
 }
 
 .logo-link h1 {
-  margin: 0; /* Enlever les marges par défaut du h1 */
-  font-size: 4rem; /* Taille de la police du titre */
+  margin: 0;
+  font-size: 4rem;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.detail-image {
+  max-width: 100%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.detail-text {
+  flex: 1;
+}
+
+.detail-text h2 {
+  margin-top: 0;
+}
+
+.detail-text p {
+  line-height: 1.6;
 }
 
 /* Media queries pour les écrans moyens */
@@ -129,32 +166,34 @@ header h1 {
   .button-grid {
     grid-template-columns: repeat(2, 1fr); /* Grille avec 2 colonnes pour les écrans moyens */
   }
+
+  .menu-toggle {
+    display: block; /* Afficher le bouton hamburger sur mobile */
+  }
+
+  .button-grid.mobile-hidden {
+    display: none; /* Masquer les boutons sur mobile lorsqu'ils sont cachés */
+  }
 }
 
-/* Media queries pour les petits écrans */
 @media (max-width: 480px) {
   .button-grid {
     grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
   }
 
   .button img {
-    width: 100px; /* Réduire la taille des images sur mobile */
+    width: 100px; /* Réduire encore plus la taille des images sur les très petits écrans */
     height: 100px;
   }
 }
 
-/* Media queries pour les grands écrans */
-@media (min-width: 1200px) {
-  .button-grid {
-    grid-template-columns: repeat(3, 1fr); /* Assurez-vous de 3 colonnes pour les grands écrans */
-  }
-
-  .button img {
-    width: 200px; /* Augmenter la taille des images sur grand écran */
-    height: 200px;
-  }
-
-  .button span {
-    font-size: 1.5rem; /* Augmenter la taille du texte sur grand écran */
-  }
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center; /* Centre le texte horizontalement */
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0; /* Assure qu'il n'y a pas de marge externe */
 }
