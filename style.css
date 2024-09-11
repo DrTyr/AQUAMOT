@@ -1,0 +1,160 @@
+/* Styles globaux */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  padding: 30px 0; /* Augmenter le padding pour plus d'espace autour du titre */
+}
+
+header h1 {
+  font-size: 4rem; /* Augmenter la taille de la police du titre */
+  margin: 0; /* Éviter les marges par défaut du titre */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Classe pour organiser les boutons dans une grille */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour grands écrans */
+  gap: 20px;
+  justify-items: center; /* Centrer chaque bouton horizontalement */
+  padding: 20px;
+}
+
+/* Styles spécifiques pour les boutons sur la page d'accueil */
+.button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.button-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.button span {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.button:hover img {
+  transform: scale(1.1);
+}
+
+.button:hover span {
+  color: #3498db;
+}
+
+/* Styles spécifiques pour la page de détail */
+.details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.detail-image {
+  width: 300px; /* Ajustez la taille de l'image comme nécessaire */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.detail-text {
+  max-width: 600px;
+}
+
+.detail-text h2 {
+  font-size: 2rem; /* Taille du titre dans la section de détails */
+  margin: 0 0 10px 0;
+}
+
+.detail-text p {
+  font-size: 1rem; /* Taille du texte dans la section de détails */
+  line-height: 1.5;
+}
+
+/* Styles spécifiques pour les boutons sur la page de détails */
+.enfants .button {
+  margin: 10px; /* Réduire la marge pour les boutons sur la page enfants */
+}
+
+.enfants .button img {
+  width: 100px; /* Réduire la taille des images sur la page enfants */
+  height: 100px;
+}
+
+.enfants .button span {
+  font-size: 1rem; /* Réduire la taille du texte sur la page enfants */
+}
+
+/* Styles pour le lien du titre dans l'en-tête */
+.logo-link {
+  text-decoration: none; /* Supprimer le soulignement du lien */
+  color: inherit; /* Hériter la couleur du texte du h1 */
+}
+
+.logo-link h1 {
+  margin: 0; /* Enlever les marges par défaut du h1 */
+  font-size: 4rem; /* Taille de la police du titre */
+}
+
+/* Media queries pour les écrans moyens */
+@media (max-width: 768px) {
+  .button-grid {
+    grid-template-columns: repeat(2, 1fr); /* Grille avec 2 colonnes pour les écrans moyens */
+  }
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 480px) {
+  .button-grid {
+    grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+  }
+
+  .button img {
+    width: 100px; /* Réduire la taille des images sur mobile */
+    height: 100px;
+  }
+}
+
+/* Media queries pour les grands écrans */
+@media (min-width: 1200px) {
+  .button-grid {
+    grid-template-columns: repeat(3, 1fr); /* Assurez-vous de 3 colonnes pour les grands écrans */
+  }
+
+  .button img {
+    width: 200px; /* Augmenter la taille des images sur grand écran */
+    height: 200px;
+  }
+
+  .button span {
+    font-size: 1.5rem; /* Augmenter la taille du texte sur grand écran */
+  }
+}
