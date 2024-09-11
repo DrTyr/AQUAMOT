@@ -45,3 +45,34 @@
 .detail-text p {
   line-height: 1.6;
 }
+
+/* Styles pour la div.details */
+.details {
+  display: flex;
+  flex-direction: row; /* Par défaut, l'image sera après le texte */
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.detail-text {
+  flex: 1;
+}
+
+.detail-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 768px) {
+  .details {
+    flex-direction: column; /* Sur les petits écrans, empiler le texte et l'image */
+  }
+
+  .detail-image {
+    order: -1; /* Placer l'image avant le texte */
+    margin-bottom: 20px; /* Ajouter un espace sous l'image */
+  }
+}
