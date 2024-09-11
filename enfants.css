@@ -1,0 +1,47 @@
+/* Styles spécifiques pour la page enfants */
+.enfants .button-grid {
+  display: flex; /* Utiliser Flexbox pour aligner les boutons en ligne */
+  flex-direction: row; /* Disposer les boutons en ligne */
+  flex-wrap: wrap; /* Permettre aux boutons de passer à la ligne suivante si nécessaire */
+  gap: 20px;
+  justify-content: center; /* Centrer les boutons horizontalement */
+}
+
+.enfants .button {
+  margin: 10px; /* Réduire la marge pour les boutons sur la page enfants */
+}
+
+.enfants .button img {
+  width: 100px; /* Réduire la taille des images sur la page enfants */
+  height: 100px;
+}
+
+.enfants .button span {
+  font-size: 1rem; /* Réduire la taille du texte sur la page enfants */
+}
+
+/* Styles pour les détails sur la page enfants */
+.details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.detail-image {
+  max-width: 100%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.detail-text {
+  flex: 1;
+}
+
+.detail-text h2 {
+  margin-top: 0;
+}
+
+.detail-text p {
+  line-height: 1.6;
+}
